@@ -10,11 +10,14 @@
   }
 </style>
 
+<div id="site__notification_bar">
+  <div class="site__notification_container">FREE GROUND SHIPPING ON ORDERS OVER $100</div>
+</div>
 {% assign hero_full_height = true %}
 <div data-section-id="{{ section.id }}" data-section-type="header-section" data-template="{{ template.name }}">
   <div class="header-wrapper{% unless hero_full_height %} header-wrapper--over-hero{% endunless %}">
     <header class="site-header" role="banner">
-      <div class="wrapper">
+      <div class="wrapper mast-wrapper">
         <div class="grid--full grid--table">
           <div class="grid__item large--hide one-quarter">
             <div class="site-nav--mobile">
@@ -74,7 +77,7 @@
                 - http://docs.shopify.com/themes/liquid-variables/linklists
             {% endcomment %}
             <!-- begin site-nav -->
-            <ul class="site-nav" id="AccessibleNav">
+            <ul class="site-nav main_nav" id="AccessibleNav">
               {% if section.settings.search == "box" %}
               <li class="site-nav__item site-nav--search__bar medium-down--hide ">
                 {% include 'search-bar', search_btn_style: 'btn', search_bar_location: 'search-bar--header' %}
@@ -132,13 +135,14 @@
                   </a>
                 </li>
               {% endif %}
-
+            </ul>
+            <ul class="site-nav nav_icons">
               {% if section.settings.search == 'page' or section.settings.search == 'modal' %}
                 {% assign search_modal = true %}
                 {% if section.settings.search == 'page' %}
                   {% assign search_modal = false %}
                 {% endif %}
-                <li class="site-nav__item">
+                <li class="site-nav__item nav_icon">
                   <a href="/search" class="site-nav__link site-nav__link--icon{% if search_modal %} js-toggle-search-modal{% endif %}" data-mfp-src="#SearchModal">
                     <span class="icon-fallback-text">
                       <span class="icon icon-search" aria-hidden="true"></span>
@@ -148,7 +152,7 @@
                 </li>
               {% endif %}
 
-              <li class="site-nav__item">
+              <li class="site-nav__item nav_icon">
                 <a href="/cart" class="site-nav__link site-nav__link--icon cart-link js-drawer-open-right" aria-controls="CartDrawer">
                   <span class="icon-fallback-text">
                     <span class="icon icon-cart" aria-hidden="true"></span>

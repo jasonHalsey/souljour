@@ -28,10 +28,13 @@
   <link rel="canonical" href="{{ canonical_url }}">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   <meta name="theme-color" content="{{ settings.color_primary }}">
+  <script src="https://use.typekit.net/rno1byv.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
   <!-- CSS ================================================== -->
   {{ 'timber.scss.css' | asset_url | stylesheet_tag }}
   {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'souljour_style.scss.css' | asset_url | stylesheet_tag }}
   {% include 'google-fonts' %}
 
   <!-- Sections ================================================== -->
