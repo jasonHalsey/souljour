@@ -5,11 +5,20 @@
 $notification_tan: #e7ddd2;
 $notification_gray: #6d6e71;
 $nav_red: #8d734a;
+$title_orange: #ff9d6c;
+$bodyFont_gray: #4f5858;
 
 //Fonts
 $mainHeaderFont:'din-2014-narrow';
 $mainBodyFont: 'din-2014';
 
+/*================ General ================*/
+body{
+	font-family: $mainBodyFont;
+}
+.no-padding{
+	padding: 0!important;
+}
 
 /*================ Navigation ================*/
 .mast-wrapper{
@@ -79,3 +88,87 @@ ul.main_nav{
 .hero--full-height { 
     max-height: 70vh;
 }
+/*================ Page Titles ================*/
+.sj_title{
+	color:$title_orange;
+	text-transform: uppercase!important;
+	font-family: $mainBodyFont;
+	font-size:2.5em;
+}
+.section-header{
+	margin-bottom:0;
+}
+
+body.template-index{
+	.main-content{
+		padding-top:10px!important;
+	}
+}
+/*================ CTAs ================*/
+.cta_block{
+	text-align: center;
+	padding: 0 1.0em;
+	img{
+		display:block;
+		margin: 1.0em auto 1.0em;
+		max-width: 275px;
+		height:auto;
+	}
+	h2{
+		color:$title_orange ;
+		font-size:27px ;
+		font-weight: 600;
+		margin:0 0 0.25em;
+	}
+	p{
+		color:$bodyFont_gray;
+		font-size: 1.25em;
+		font-weight:400 ;
+	}
+	a{
+		color:$nav_red ;
+		font-size: 1.50em;
+		font-weight:600 ;
+		&:hover{
+			color:$title_orange;
+		}
+	}
+}
+/*================ Instagram Feed ================*/
+.instagram-feed{
+	text-align: center;
+}
+
+/*================ Footer ================*/
+
+.footer_title{
+	color: $nav_red;
+	font-weight: 400;
+	font-size: 18px;
+	margin-bottom: 0;
+}
+.vision_block{
+	color:$title_orange;
+	font-size: 30px;
+	font-weight: 700;
+	width:70%;
+	line-height: 1.25;
+}
+#footer_menu{
+	list-style: none;
+	li{
+		a{
+			color:$nav_red;
+			font-size: 1.5em;
+			font-weight: 400;
+			text-transform: uppercase;
+			&:hover{
+				color:$title_orange;
+			}
+		}
+	}
+}
+
+
+
+
