@@ -8,6 +8,7 @@ $nav_red: #8d734a;
 $title_orange: #ff9d6c;
 $bodyFont_gray: #4f5858;
 $hashBlue: #00263d;
+$spanRed: #da1c5c;
 
 //Fonts
 $mainHeaderFont:'din-2014-narrow';
@@ -20,6 +21,11 @@ body{
 .no-padding{
 	padding: 0!important;
 }
+// @media screen and (max-width: 590px){
+// 	.grid__item {
+// 		padding-left:0!important;
+// 	}
+// }
 
 /*================ Navigation ================*/
 .mast-wrapper{
@@ -62,6 +68,7 @@ ul.main_nav{
 /*================ Hero header ================*/
 .wrapper{
 	max-width: 1200px!important;
+	padding: 0 0 0 15px;
 }
 .site-header{
 	padding:15px 0 10px;
@@ -156,6 +163,11 @@ body.template-index{
 
 /*================ Footer ================*/
 footer.site-footer{
+	.wrapper{
+		@media screen and (max-width: 590px){
+			padding:0;
+		}
+	}
 	.footer_title{
 		color: $nav_red;
 		font-weight: 400;
@@ -223,6 +235,85 @@ footer.site-footer{
 					color:$title_orange;
 				}
 			}
+		}
+		@media screen and (max-width: 590px){
+			margin: 0 0 15px 0;
+		}
+	}
+}
+
+/*================ About Page Styles ================*/
+
+body#about{
+	font-family: $mainBodyFont;
+	.main-content{
+		padding-top:0!important;
+	}
+	.about-content{
+		text-align: center;
+		.sj-page-header{
+			position:relative;
+
+			h1{
+				position: absolute;
+	  			left: 50%;
+	  			top:50%;
+	  			transform: translate(-50%,-50%);
+				z-index:5;
+				font-family: $mainBodyFont;
+				font-weight:700;
+				font-size: 4.5em;
+				color: #fff;
+				text-transform: uppercase;
+				text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.67);
+			}
+			img{
+				z-index:3;
+			}
+		}
+		h1{
+			font-family: $mainBodyFont;
+			font-weight: 400;
+			color:$hashBlue;
+			span{
+				color:$spanRed;
+			}
+		}
+		h2{
+			font-family: $mainBodyFont;
+			font-weight: 600;
+			color:$title_orange;
+			font-size: 37px;
+		}
+		h3{
+			font-family: $mainBodyFont;
+			font-weight: 600;
+			color:$bodyFont_gray;
+			font-size: 24px;
+			margin:0;
+			text-transform: none!important;
+		}
+		h4{
+			color: $nav_red;
+			font-weight: 400;
+			font-size: 18px;
+			margin-bottom: 0;
+			text-transform: uppercase;
+		}
+		h5{
+			color:$hashBlue;
+			font-size:24px;
+			font-family: $mainBodyFont;
+			font-weight: 600;
+		    width: 35%;
+		    line-height: 1.65;
+		    margin: 1.0em auto;
+		    @media screen and (max-width: 590px){
+				width:90%;
+			}
+		}
+		p{
+
 		}
 	}
 }
