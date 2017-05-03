@@ -25,7 +25,14 @@ body{
 .mast-wrapper{
 	padding:0!important;
 }
+@media screen and (min-width: 916px) {
+	.site-nav{
+		text-align:left;
+	}
+}
+
 .site-nav__link {
+	padding:0 15px;
   .is-light & {
     color: $nav_red;
   }
@@ -118,7 +125,7 @@ body.template-index{
 	h2{
 		color:$title_orange ;
 		font-size:27px ;
-		font-weight: 600;
+		font-weight: 400;
 		margin:0 0 0.25em;
 	}
 	p{
@@ -128,16 +135,21 @@ body.template-index{
 	}
 	a{
 		color:$nav_red ;
-		font-size: 1.50em;
-		font-weight:600 ;
+		font-size: 18px;
+		font-weight:400 ;
 		&:hover{
 			color:$title_orange;
 		}
 	}
 }
 /*================ Instagram Feed ================*/
-.instagram-feed{
+.insta_title{
 	text-align: center;
+	font-size: 18px;
+	font-weight: 400;
+	color: $nav_red;
+}
+.instagram-feed{
 	margin-bottom: 2.0em;
 	margin-top: 3.0em;
 }
@@ -156,6 +168,10 @@ footer.site-footer{
 		font-weight: 700;
 		width:70%;
 		line-height: 1.25;
+		@media screen and (max-width: 916px) {
+			width:100%;
+			text-align: center;
+		}
 	}
 	input, textarea, select {
 	    font-style: italic;
