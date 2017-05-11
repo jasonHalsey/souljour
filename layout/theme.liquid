@@ -113,8 +113,9 @@
         </div>
       {% endunless %}
     </main>
-
-
+    {% if template.name == "index" or template == "collection.image" %}
+      {% include 'ctas' %}
+    {% endif %}
     {% section 'footer' %}
 
   </div>
