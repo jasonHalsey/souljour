@@ -61,6 +61,7 @@
 
   {{ '//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js' | script_tag }}
   {{ 'modernizr.min.js' | asset_url | script_tag }}
+  {{ 'souljour-scripts.js' | asset_url | script_tag }}
 
 
   {% comment %}
@@ -98,11 +99,14 @@
   </div>
 
   <div id="PageContainer" class="page-container">
-
-    {% section 'header' %}
-    {% if template.name == "index" %}
-      {% section 'slideshow' %}
-    {% endif %}
+    
+      {% section 'header' %}
+      <div class='headslide_container'>
+      {% if template.name == "index" %}
+        {% include 'poem' %}
+        {% section 'slideshow' %}
+      {% endif %}
+    </div>
 
     <main class="main-content" role="main">
       {% unless template.name == "index" or template == "collection.image" %}
@@ -113,7 +117,7 @@
         </div>
       {% endunless %}
     </main>
-    {% if template.name == "index" or template == "collection.image" %}
+    {% if template.name == "index" %}
       {% include 'ctas' %}
     {% endif %}
     {% section 'footer' %}

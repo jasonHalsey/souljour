@@ -16,7 +16,7 @@ $mainBodyFont: 'din-2014';
 
 /*================ General ================*/
 body{
-	font-family: $mainBodyFont;
+	font-family: $mainBodyFont!important;
 }
 .no-padding{
 	padding: 0!important;
@@ -27,7 +27,19 @@ body{
 	    padding-top:0;
 	}
 }
-
+h1{
+	font-family: $mainBodyFont!important;
+}
+h2{
+	font-family: $mainBodyFont!important;
+}
+p{
+	color:$hashBlue;
+	font-size: 1.25em;
+	font-weight:400 ;
+	font-family: $mainBodyFont!important;
+	line-height:1.2;
+}
 /*================ Navigation ================*/
 .mast-wrapper{
 	padding:0!important;
@@ -61,8 +73,8 @@ ul.main_nav{
     display: inline-block;
     li{
     	a{
-    		font-family: $mainHeaderFont;
-    		font-size: 1.5em;
+    		font-family: $mainBodyFont;
+    		font-size: 18px;
     	}
     }
 }
@@ -105,12 +117,65 @@ ul.main_nav{
 .hero--full-height { 
     max-height: 70vh;
 }
+.slick-slider{
+	.slick-dots{
+		text-align: right;
+		right:4.0rem;
+		li.slick-active{
+			button{
+				&:before{
+					color:$title_orange!important;
+				}
+			}
+		}
+	}
+}
+.slick-slider .slick-dots li.slick-active button:before{
+	background-color:$title_orange!important;
+	border-color: $title_orange!important;
+}
+.hero__text-wrap{
+	text-align: left;
+	color: #fff;
+	span.gold_txt{
+		color:$nav_red;
+	}
+
+}
+.headslide_container{
+	position: relative;
+}
+.poem_container{
+	position:absolute;
+	z-index: 666;
+	display: block;
+	width:100%;
+	left:0;
+	top: 50%;
+  	transform: translateY(-50%);
+	padding: 2.0em;
+	p{
+		color:#fff;
+		font-size: 28px;
+	}
+	span.peach_txt{
+		color:$title_orange;
+		font-size: 28px;
+	}
+	span.cred_txt{
+		font-size: 16px;
+		color:#fff;
+	}
+	
+}
 /*================ Page Titles ================*/
 .sj_title{
 	color:$title_orange;
 	text-transform: uppercase!important;
 	font-family: $mainBodyFont;
-	font-size:2.5em;
+	font-size:27px ;
+	font-weight: 400;
+	letter-spacing: 2.7px!important;
 }
 .section-header{
 	margin-bottom:0;
@@ -125,6 +190,7 @@ body.template-index{
 .cta_block{
 	text-align: center;
 	padding: 0 1.0em;
+	font-family: $mainBodyFont!important;
 	img{
 		display:block;
 		margin: 1.0em auto 1.0em;
@@ -136,16 +202,19 @@ body.template-index{
 		font-size:27px ;
 		font-weight: 400;
 		margin:0 0 0.25em;
+		font-family: $mainBodyFont!important;
 	}
 	p{
-		color:$bodyFont_gray;
+		color:$hashBlue;
 		font-size: 1.25em;
 		font-weight:400 ;
+		font-family: $mainBodyFont!important;
 	}
 	a{
 		color:$nav_red ;
 		font-size: 18px;
 		font-weight:400 ;
+		letter-spacing: 1.8px;
 		&:hover{
 			color:$title_orange;
 		}
@@ -154,9 +223,11 @@ body.template-index{
 /*================ Instagram Feed ================*/
 .insta_title{
 	text-align: center;
-	font-size: 18px;
+	color:$title_orange ;
+	font-size:27px ;
 	font-weight: 400;
-	color: $nav_red;
+	margin:0 0 0.25em;
+	font-family: $mainBodyFont!important;
 }
 .instagram-feed{
 	margin-bottom: 2.0em;
@@ -165,6 +236,11 @@ body.template-index{
 
 /*================ Footer ================*/
 footer.site-footer{
+	border-top:1px solid $nav_red;
+	padding-top: 2.0em;
+	.btn{
+		background-color: $nav_red;
+	}
 	.wrapper{
 		@media screen and (max-width: 590px){
 			padding:0;
@@ -190,7 +266,7 @@ footer.site-footer{
 	input, textarea, select {
 	    font-style: italic;
 	    font-size: 1.125em;
-	    border-color: #1c1d1d;
+	    border-color: $nav_red;
 	    background-color: transparent;
 	    color: #1c1d1d;
 	    -webkit-transition: opacity 0.4s ease-out;
@@ -220,9 +296,10 @@ footer.site-footer{
 		list-style: none;
 		margin: 0;
 		li{
-			font-weight: 700;
 			color:$hashBlue;
-			font-size: 1.5em;
+			font-size: 1.25em;
+			font-weight:400 ;
+			font-family: $mainBodyFont!important;
 		}
 	}
 	#footer_menu{
@@ -230,7 +307,7 @@ footer.site-footer{
 		li{
 			a{
 				color:$nav_red;
-				font-size: 1.5em;
+				font-size: 18px;
 				font-weight: 400;
 				text-transform: uppercase;
 				&:hover{
@@ -251,10 +328,13 @@ footer.site-footer{
 
 	h1{
 		position: absolute;
-		width:100%;
-		left: 50%;
-		top:50%;
-		transform: translate(-50%,-50%);
+		// width:100%;
+		// left: 50%;
+		// top:50%;
+		// transform: translate(-50%,-50%);
+		line-height: 1;
+		left:22px;
+		bottom:-10px;
 		z-index:5;
 		font-family: $mainBodyFont;
 		font-weight:700;
@@ -262,6 +342,10 @@ footer.site-footer{
 		color: #fff;
 		text-transform: uppercase;
 		text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.67);
+		@media screen and (max-width: 590px){
+			font-size: 2.5em;
+			left:12px;
+		}
 	}
 	img{
 		z-index:3;
@@ -322,7 +406,7 @@ body#about{
 		}
 	}
 	p{
-		color:$bodyFont_gray;
+		color:$hashBlue;
 	}
 }
 
