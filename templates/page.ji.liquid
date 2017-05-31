@@ -1,0 +1,39 @@
+<!-- /templates/page.ji.liquid -->
+<div class="grid">
+    <header class="section-header sj-page-header text-center">
+      <h1>{{ page.title }}</h1>
+      <img src="https://cdn.shopify.com/s/files/1/1954/4515/files/ji-collection.jpg?6430508152654290742" />
+    </header>
+
+    <div class="grid">
+
+        <div class="ji-mast">
+          <p>In India, "Ji" is a suffix added to a name to convey respect.<br>
+          Each season, Souljour honors one person who walks the walk and is making<br>
+          a difference in his or her community.</p>
+
+          <p>
+          Souljour will donate <span>100% of the profits</span> from the sale of this<br>
+          collection to the foundation of the Ji's choice.</p>
+
+          <p>This is a limited edition collection - get while supplies last!</p>
+        </div>
+        <div class="ji-grid grid clearfix"> 
+          {% assign collectionHandle = 'ji-collection' %}
+          {% for product in collections[collectionHandle].products %}
+          <a href='{{ product.url }}' class="grid__item large--one-half">
+          <img src='https://cdn.shopify.com/s/files/1/1954/4515/{{ product.featured_image }}'>
+          {% endfor %}
+          </a>
+      </div>
+
+  </div>
+    <div class="grid ji-page-content">
+          <div class="ji-content grid__item large--two-thirds">
+         {{ page.content }}
+        </div>
+        <div class="ji-image grid__item large--one-third">
+        </div>
+    </div>
+  </div>
+</div>
