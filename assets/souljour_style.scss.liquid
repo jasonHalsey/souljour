@@ -86,8 +86,10 @@ ul.main_nav{
 }
 h2.sj_title{
 	&:after{
-		content: url('https://cdn.shopify.com/s/files/1/1954/4515/files/Tilak_sm.png?16321445383923401052');
+		content: url('https://cdn.shopify.com/s/files/1/1954/4515/files/tilak_v2.png?1580185984454039683');
 		display:block;
+		width:160px;
+		margin: 0 auto;
 	}
 }
 
@@ -103,6 +105,10 @@ h2.sj_title{
 }
 .site-header{
 	padding:15px 0 10px;
+}
+.site-header__logo img{
+	max-width: 275px;
+	width:100%;
 }
 #site__notification_bar {
   background-color: $notification_tan;
@@ -132,9 +138,10 @@ h2.sj_title{
 	}
 }
 .hero--full-height { 
-    max-height: 70vh;
+    max-height: 68vh;
 }
 .slick-slider{
+	margin-bottom: 0;
 	.slick-dots{
 		text-align: right;
 		right:4.0rem;
@@ -185,6 +192,18 @@ h2.sj_title{
 	}
 	
 }
+section.quote_container{
+	background-color: $hashBlue;
+	padding:3.0em 0;
+	margin-bottom: 2.0em;
+	text-align: center;
+}
+
+div.quote{
+	font-size:18px;
+	color:$nav_red;
+
+}
 h2.seeker_quote{
 	font-family: $mainBodyFont;
 	font-weight: 600;
@@ -192,7 +211,7 @@ h2.seeker_quote{
 	font-size: 37px;
 	text-align: center;
 	width:60%;
-	margin: 0 auto 1.5em;
+	margin: 0 auto;
 }
 /*================ Page Titles ================*/
 .sj_title{
@@ -209,10 +228,14 @@ h2.seeker_quote{
 
 body.template-index{
 	.main-content{
-		padding-top:10px!important;
+		padding-top:0px!important;
 	}
 }
 /*================ CTAs ================*/
+//Remove This when full site goes live
+.cta_row{
+	display:none;
+}
 .cta_block{
 	text-align: center;
 	padding: 0 1.0em;
@@ -301,6 +324,24 @@ footer.site-footer{
 			text-align: center;
 		}
 	}
+	.soul_block{
+		color:$title_orange;
+		font-size: 30px;
+		font-weight: 700;
+		width:100%;
+		line-height: 1.25;
+		@media screen and (max-width: 916px) {
+			width:100%;
+			text-align: center;
+		}
+	}
+	p.soul_small {
+	    color: #00263d;
+	    font-size: 1.0em;
+	    font-weight: 400;
+	    font-family: "din-2014" !important;
+	    line-height: 1.2;
+		}
 	input, textarea, select {
 	    font-style: italic;
 	    font-size: 1.125em;
@@ -620,7 +661,9 @@ body#give-back{
 .form-vertical .btn{
 	background-color: $nav_red;
 }
-
+a.url_link{
+	color: $title_orange;
+}
 
 
 

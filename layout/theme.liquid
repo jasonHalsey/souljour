@@ -121,7 +121,9 @@
       {% endunless %}
     </main>
     {% if template.name == "index" %}
-      {% include 'ctas' %}
+      <section class="cta_row">
+        {% include 'ctas' %}
+      </section>
     {% endif %}
     {% section 'footer' %}
 
