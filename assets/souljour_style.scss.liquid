@@ -17,6 +17,7 @@ $mainBodyFont: 'din-2014';
 /*================ General ================*/
 body{
 	font-family: $mainBodyFont!important;
+	color:$hashBlue;
 }
 .no-padding{
 	padding: 0!important;
@@ -35,10 +36,10 @@ h2{
 }
 p{
 	color:$hashBlue;
-	font-size: 1.25em;
+	font-size: 1.08em;
 	font-weight:400 ;
 	font-family: $mainBodyFont!important;
-	line-height:1.2;
+	line-height:1.8;
 }
 /*================ Navigation ================*/
 .mast-wrapper{
@@ -48,7 +49,7 @@ p{
 }
 @media screen and (min-width: 916px) {
 	.site-nav{
-		text-align:left;
+		text-align:right;
 	}
 }
 .site-nav--active {
@@ -109,6 +110,10 @@ h2.sj_title{
 .site-header__logo img{
 	max-width: 300px;
 	width:100%;
+	height:auto;
+	@media screen and (max-width: 768px){
+		max-width: 271px!important;
+	}
 }
 #site__notification_bar {
   background-color: $notification_tan;
@@ -212,6 +217,15 @@ h2.seeker_quote{
 	text-align: center;
 	width:60%;
 	margin: 0 auto;
+}
+section.seeker_txt{
+	padding:3.0em 0;
+	margin-bottom: 2.0em;
+	text-align: center;
+	color:$nav_red;
+	font-family:$mainBodyFont;
+	font-size: 24px; 
+	line-height: 2.0;
 }
 /*================ Page Titles ================*/
 .sj_title{
@@ -438,11 +452,11 @@ body#about{
 	}
 	.main-content{
 		padding-top:0!important;
-	}
-	a{
-		color:$title_orange;
-		font-family: "din-2014";
-	    font-weight: 600;
+		a{
+			color:$title_orange;
+			font-family: "din-2014";
+		    font-weight: 600;
+		}
 	}
 }
 .about-content{
@@ -456,10 +470,20 @@ body#about{
 	}
 	h2{
 		font-family: $mainBodyFont;
-		font-weight: 600;
+		font-weight: 700;
 		color:$title_orange;
-		font-size: 37px;
+		font-size: 40px;
 		text-align: center;
+		text-transform: capitalize;
+		line-height:1.2;
+		&:after{
+			content: url('https://cdn.shopify.com/s/files/1/1954/4515/files/Tilak_sm.png?16321445383923401052');
+			display:block;
+			margin-bottom: 0.25em;
+		}
+	}
+	h2:not(:first-child){
+		margin-top:1.75em;
 	}
 	h3{
 		font-family: $mainBodyFont;
@@ -472,24 +496,11 @@ body#about{
 	h4{
 		color: $nav_red;
 		font-weight: 400;
-		font-size: 32px;
+		font-size: 22px;
 		font-family: $mainBodyFont;
 		margin-bottom: 0;
 		text-transform: uppercase;
-	}
-	h4.heart{
-		&:before{
-			content: url('https://cdn.shopify.com/s/files/1/1954/4515/files/heart.png?4529980615108365086');
-			display:block;
-			margin-bottom: 0.5em;
-		}
-	}
-	h4.sage{
-		&:before{
-			content: url('https://cdn.shopify.com/s/files/1/1954/4515/files/sage.png?4529980615108365086');
-			display:block;
-			margin-bottom: 0.5em;
-		}
+		line-height:1.2;
 	}
 	img.full-img{
 		margin: 1.0em 0;
@@ -498,7 +509,7 @@ body#about{
 	}
 	h5{
 		color:$hashBlue;
-		font-size:24px;
+		font-size:19px;
 		font-family: $mainBodyFont;
 		font-weight: 600;
 	    width: 35%;
@@ -516,6 +527,9 @@ body#about{
 		@media screen and (max-width: 590px){
 			margin: 0.5em 1.0em;
 		}
+	}
+	ul{
+		list-style-type: none
 	}
 	a{
 		color:$title_orange;
@@ -640,23 +654,9 @@ body#give-back{
 	}
 	div.about-content{
 		text-align: center;
+		padding:0 2.0em;
 	}
 
-
-
-	// div.col-1{
-	// 	width:50%;
-	// 	padding: 1.0em 0.5em 0 0;
-	// 	float: left;
-	// }
-	// div.col-2{
-	// 	width:50%;
-	// 	padding: 1.0em 0em 1.0em 0.5em;
-	// 	float:left;
-	// 	p{
-	// 		margin: 0 0 5px 0;
-	// 	}
-	// }
 }
 
 /*================ Contact Page Styles ================*/
@@ -665,6 +665,75 @@ body#give-back{
 }
 a.url_link{
 	color: $title_orange;
+}
+
+/*================ Collections Page Styles ================*/
+.grid-product__image-link {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    -webkit-transition: opacity 0.4s ease-out;
+    -moz-transition: opacity 0.4s ease-out;
+    -ms-transition: opacity 0.4s ease-out;
+    -o-transition: opacity 0.4s ease-out;
+    transition: opacity 0.4s ease-out;
+}
+
+/*================ Product Single Page Styles ================*/
+h1.product-single__title{
+	font-family: $mainBodyFont;
+	font-weight: 600;
+	color:$title_orange;
+	font-size: 37px;
+}
+#AddToCart{
+	background-color: #8d734a;
+}
+.product-single__price, .product-single__price--compare-at{
+	font-family: $mainBodyFont;
+	font-weight: 600;
+	color:$title_orange;
+	font-size: 26px;
+}
+
+
+@media screen and (min-width: 591px){
+	.product-single__photo[data-mfp-src] {
+	    cursor: pointer;
+	}
+}
+
+
+/*================ Cart Page Styles ================*/
+body#your-shopping-cart{
+	h1.cart-title{
+		font-family: $mainBodyFont;
+		font-weight: 600;
+		color:$title_orange;
+		font-size: 37px;
+		text-align: left;
+	}
+	input, textarea, select {
+	    font-style: normal;
+	    font-size: 1.125em;
+	    border-color: transparent;
+	    background-color: #f6f6f6;
+	    color: #1c1d1d;
+	    -webkit-transition: opacity 0.4s ease-out;
+	    -moz-transition: opacity 0.4s ease-out;
+	    -ms-transition: opacity 0.4s ease-out;
+	    -o-transition: opacity 0.4s ease-out;
+	    transition: opacity 0.4s ease-out;
+	}
+	.ajaxcart__product-name, .cart__product-name {
+	    font-style: normal;
+	}
+	h4, .h4 {
+		font-family: $mainBodyFont;
+		color: $title_orange;
+	}
+
 }
 
 
