@@ -34,7 +34,7 @@
   <!-- CSS ================================================== -->
   {{ 'timber.scss.css' | asset_url | stylesheet_tag }}
   {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
-  {{ 'souljour_style.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'souljour_v2_style.scss.css' | asset_url | stylesheet_tag }}
   {% include 'google-fonts' %}
 
   <!-- Sections ================================================== -->
@@ -112,11 +112,11 @@
       {% if template.name == "index" %}
         {% include 'seeker' %}
       {% endif %}
-      {% unless template.name == "index" or template == "collection.image" %}
+      {% unless template.name == "index" or template == "collection.image" or template == "page.about" or template == "page.cus-service"  %}
         <div class="wrapper">
       {% endunless %}
         {{ content_for_layout }}
-      {% unless template.name == "index" or template == "collection.image" %}
+      {% unless template.name == "index" or template == "collection.image" or template == "page.about" template == "page.cus-service" %}
         </div>
       {% endunless %}
     </main>

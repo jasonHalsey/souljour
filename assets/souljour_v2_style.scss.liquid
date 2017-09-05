@@ -9,6 +9,8 @@ $title_orange: #ff9d6c;
 $bodyFont_gray: #4f5858;
 $hashBlue: #00263d;
 $spanRed: #da1c5c;
+$product_title: #84673c;
+$product_thumb_border: #a08966;
 
 //Fonts
 $mainHeaderFont:'din-2014-narrow';
@@ -42,6 +44,11 @@ p{
 	line-height:1.8;
 }
 /*================ Navigation ================*/
+#shopify-section-header{
+	z-index: 99999;
+    position: relative;
+    background-color: #fff;
+}
 .mast-wrapper{
 	padding:0!important;
 	max-width: 1200px !important;
@@ -219,7 +226,7 @@ h2.seeker_quote{
 	margin: 0 auto;
 }
 section.seeker_txt{
-	padding:3.0em 0;
+	padding:1.5em 0 1.0em;
 	margin-bottom: 2.0em;
 	text-align: center;
 	color:$nav_red;
@@ -357,6 +364,7 @@ footer.site-footer{
 	    line-height: 1.2;
 		}
 	input, textarea, select {
+	    width:100%;
 	    font-style: italic;
 	    font-size: 1.125em;
 	    border-color: $nav_red;
@@ -445,6 +453,13 @@ footer.site-footer{
 
 /*================ About Page Styles ================*/
 
+div.sub-hero{
+	img{
+		width:100%;
+		height:auto;
+	}
+}
+
 body#about{
 	font-family: $mainBodyFont;
 	.about-content{
@@ -453,9 +468,12 @@ body#about{
 	.main-content{
 		padding-top:0!important;
 		a{
-			color:$title_orange;
+			color:$nav_red;
 			font-family: "din-2014";
 		    font-weight: 600;
+		    &:hover{
+		    	color:$title_orange;
+		    }
 		}
 	}
 }
@@ -474,16 +492,21 @@ body#about{
 		color:$title_orange;
 		font-size: 40px;
 		text-align: center;
-		text-transform: capitalize;
+		text-transform: none;
 		line-height:1.2;
+		margin-top: 1.75em;
+			
+	}
+	h2.first-header{
+		margin-top: 0;
+	}
+	
+	h2.tilak{
 		&:after{
 			content: url('https://cdn.shopify.com/s/files/1/1954/4515/files/Tilak_sm.png?16321445383923401052');
 			display:block;
 			margin-bottom: 0.25em;
 		}
-	}
-	h2:not(:first-child){
-		margin-top:1.75em;
 	}
 	h3{
 		font-family: $mainBodyFont;
@@ -532,14 +555,14 @@ body#about{
 		list-style-type: none
 	}
 	a{
-		color:$title_orange;
+		color:$nav_red;
 		font-family: "din-2014";
 	    font-weight: 600;
 	}
 }
 
 .wrapper { 
-  margin: 0 auto 3.0em;
+  margin: 1.5em auto 3.0em;
 }
 
 /*================ JI Page Styles ================*/
@@ -666,8 +689,41 @@ body#give-back{
 a.url_link{
 	color: $title_orange;
 }
+ul.pre_contact{
+	width: 100%;
+	text-align:center;
+	list-style-type: none;
+	margin: 0.5em 0 2.0em;
+	padding:0;
+	font-size: 1.5em;
+	a{
+		color:$nav_red;
+		&:hover{
+			color:$title_orange;
+		}
+	}
+}
 
 /*================ Collections Page Styles ================*/
+.collection-hero__image{
+
+}
+h2.collection_title{
+	font-family: $mainBodyFont;
+	font-weight: 600;
+	color:$title_orange;
+	font-size: 37px;
+	text-align: center;
+	line-height: 1.0;
+	margin: 0 0 1.0em;
+	&:after{
+		content: url('https://cdn.shopify.com/s/files/1/1954/4515/files/Tilak_sm.png?16321445383923401052');
+		display:block;
+		margin-bottom: 0.25em;
+	}
+
+}
+
 .grid-product__image-link {
     position: relative;
     display: block;
@@ -679,12 +735,34 @@ a.url_link{
     -o-transition: opacity 0.4s ease-out;
     transition: opacity 0.4s ease-out;
 }
+@media screen and (min-width: 769px){
+.collection-hero {
+    margin-top: -65px;
+    margin-bottom: 40px;
+   }
+}
+
+.grid-product__image-link{
+	border: 1px solid $product_thumb_border;
+}
+.grid-product__image-wrapper{
+	height:374px!important;
+}
+
+.grid-product__title,.grid-product__price{
+	color: $nav_red;
+	font-weight: 400;
+	font-size: 18px;
+	margin-bottom: 0;
+	font-style: normal;
+	text-transform: uppercase;
+}
 
 /*================ Product Single Page Styles ================*/
 h1.product-single__title{
 	font-family: $mainBodyFont;
-	font-weight: 600;
-	color:$title_orange;
+	font-weight: 700;
+	color:$product_title;
 	font-size: 37px;
 }
 #AddToCart{
@@ -692,11 +770,23 @@ h1.product-single__title{
 }
 .product-single__price, .product-single__price--compare-at{
 	font-family: $mainBodyFont;
-	font-weight: 600;
-	color:$title_orange;
+	font-weight: 700;
+	color:$product_title;
 	font-size: 26px;
 }
+.return-link{
+	color:$hashBlue;
+}
+.social-sharing.clean a{
+	color:$hashBlue;
+}
 
+.single-option-radio__label{
+	font-weight:600;
+}
+.product-single__photos{
+	padding-top:45px;
+}
 
 @media screen and (min-width: 591px){
 	.product-single__photo[data-mfp-src] {

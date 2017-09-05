@@ -5,16 +5,6 @@
 {% paginate collection.products by 12 %}
 
 <header class="section-header text-center">
-  <h1>{{ collection.title }}</h1>
-  {% if collection.description != blank %}
-    <div class="grid">
-      <div class="grid__item">
-        <div class="rte">
-          {{ collection.description }}
-        </div>
-      </div>
-    </div>
-  {% endif %}
 
   {% if section.settings.collection_tags_enable %}
     {% if collection.all_tags.size > 0 %}
